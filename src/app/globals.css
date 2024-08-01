@@ -1,0 +1,120 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* roboto-regular - latin */
+@font-face {
+  font-display: swap;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: url('./../assets/font/roboto-v30-latin-regular.woff2') format('woff2');
+}
+/* roboto-500 - latin */
+@font-face {
+  font-display: swap;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  src: url('./../assets/font/roboto-v30-latin-500.woff2') format('woff2');
+}
+/* roboto-600 - latin */
+@font-face {
+  font-display: swap;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 600;
+  src: url('./../assets/font/roboto-v30-latin-600.woff2') format('woff2');
+}
+.Roboto_400 {
+  font-family: 'Roboto';
+  font-weight: 400;
+}
+.Roboto_500 {
+  font-family: 'Roboto';
+  font-weight: 500;
+}
+.Roboto_600 {
+  font-family: 'Roboto';
+  font-weight: 600;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+/* slider... */
+.main_slider .swiper-button-prev {
+  display: none !important;
+}
+.main_slider .swiper-button-next {
+  right: 42px !important;
+}
+.main_slider .swiper-button-next:after {
+  font-size: 32px !important;
+  color: #555555;
+}
+@media (max-width: 1535px) {
+  .main_slider .swiper-button-next {
+    right: 31px !important;
+  }
+}
+@media (max-width: 1023px) {
+  .main_slider .swiper-button-next:after {
+    font-size: 20px !important;
+  }
+
+  .main_slider .swiper-button-next {
+    right: 9px !important;
+  }
+}
+@media (max-width: 475px) {
+  .main_slider .swiper-button-next {
+    right: 0 !important;
+  }
+}
+
+/* cardslider... */
+.cardSwiper .swiper-button-prev {
+  display: none !important;
+}
+.cardSwiper .swiper-button-next {
+  position: static;
+  z-index: 1;
+}
+.cardSwiper .swiper-button-next:after {
+  font-size: 15px !important;
+  color: white;
+  height: 45px;
+  width: 45px;
+  position: absolute;
+  right: 90px;
+  display: flex;
+  background-color: #00c462;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50px;
+}
+
+@media (max-width: 1440px) {
+  .cardSwiper .swiper-button-next:after {
+    right: 28px;
+  }
+}
+.cardSwiper.swiper {
+  position: inherit;
+  display: flex;
+  align-items: center;
+}
+@media (max-width: 409px) {
+  .cardSwiper .swiper-slide {
+    display: flex;
+    justify-content: center;
+  }
+  .cardSwiper .swiper-button-next:after {
+    position: absolute;
+    right: 0;
+  }
+}
